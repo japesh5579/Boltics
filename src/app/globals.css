@@ -38,38 +38,6 @@ body {
   font-family: var(--font-display), "Arial Narrow", sans-serif;
 }
 
-@keyframes marquee-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.reveal-init {
-  opacity: 0;
-  transform: translateY(24px);
-}
-
-.reveal {
-  animation: marquee-fade-in 0.8s ease forwards;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal-init {
-    opacity: 0;
-    transform: none;
-  }
-  .reveal {
-    animation: none;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-}
-
 ::-webkit-scrollbar {
   width: 10px;
 }

@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Flame, Gauge, CircleDot, ShieldCheck, Wrench, Factory } from "lucide-react";
 import Reveal from "./Reveal";
+import FadeImage from "./FadeImage";
 
 const FEATURES = [
   { icon: Flame, title: "Heat Treated (Special)", subtitle: "Longer working life" },
@@ -47,10 +47,10 @@ export default function PerformanceSection() {
         </Reveal>
 
         <Reveal delay={150} className="relative flex flex-col overflow-hidden rounded-lg bg-ink-soft/60">
-          <div className="relative aspect-[4/5] w-full">
-            <Image
-              src="/images/products/cultivator-shovel.png"
-              alt="Aggarwal Industries cultivator shovel with deep countered holes"
+          <div className="relative aspect-[16/9] w-full">
+            <FadeImage
+              src="/images/about-rice-field.jpg"
+              alt="Healthy crop field grown with Aggarwal Industries implements"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -58,10 +58,10 @@ export default function PerformanceSection() {
           </div>
           <div className="border-t border-white/10 p-6">
             <p className="font-display text-sm font-semibold uppercase tracking-wide text-white">
-              Cultivator Shovel
+              Built for Punjab&rsquo;s Fields
             </p>
             <p className="mt-1 text-xs text-white/50">
-              15&Prime;&ndash;17&Prime; sizes, 7&ndash;14mm thickness, chamfered range also available
+              Trusted by farmers and dealers across Punjab since 1988
             </p>
           </div>
         </Reveal>

@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Reveal({
   children,
-  delay = 0,
   className = "",
 }: {
   children: React.ReactNode;
@@ -35,11 +34,7 @@ export default function Reveal({
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className={`${visible ? "reveal" : "reveal-init"} ${className}`}
-      style={{ animationDelay: `${delay}ms` }}
-    >
+    <div ref={ref} className={`${visible ? "opacity-100" : "opacity-0"} ${className}`}>
       {children}
     </div>
   );

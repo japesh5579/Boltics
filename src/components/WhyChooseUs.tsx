@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { ChevronDown, Phone } from "lucide-react";
 import Reveal from "./Reveal";
+import FadeImage from "./FadeImage";
 
 const ITEMS = [
   {
@@ -83,14 +83,15 @@ export default function WhyChooseUs() {
           </Reveal>
 
           <Reveal delay={150} className="relative">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md bg-ink">
-              <Image
-                src="/images/products/seed-drill-shovel.png"
-                alt="Aggarwal Industries seed drill shovel"
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-md shadow-xl">
+              <FadeImage
+                src="/images/why-choose-crop.jpg"
+                alt="Healthy crop rows growing in well-tilled soil"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain p-10"
+                className="object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
             <div className="relative -mt-10 ml-6 flex max-w-xs items-center gap-4 rounded-md bg-orange p-5 shadow-lg sm:ml-10">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20 text-white">

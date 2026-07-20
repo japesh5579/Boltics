@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import CategoryStrip from "@/components/CategoryStrip";
 import PerformanceSection from "@/components/PerformanceSection";
 import ManufacturingProcess from "@/components/ManufacturingProcess";
 import Gallery from "@/components/Gallery";
@@ -17,13 +16,12 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <CategoryStrip />
+        <Stats />
         <PerformanceSection />
         <ManufacturingProcess />
         <Gallery />
         <Products />
         <WhyChooseUs />
-        <Stats />
         <DealerCTA />
         <GetQuote />
       </main>

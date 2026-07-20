@@ -1,13 +1,13 @@
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
+import FadeImage from "./FadeImage";
 
 export default function Gallery() {
   return (
     <section id="gallery" className="relative bg-ink">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="relative h-[340px] bg-ink-soft md:h-[520px]">
-          <Image
+          <FadeImage
             src="/images/gallery-forge.jpeg"
             alt="Hot forging at Aggarwal Industries' rolling and forging unit, sparks flying off freshly forged steel"
             fill
@@ -21,9 +21,9 @@ export default function Gallery() {
         </div>
 
         <div className="relative h-[340px] md:h-[520px]">
-          <Image
-            src="/images/gallery-field.jpeg"
-            alt="Cultivator fitted with Aggarwal Industries shovels tilling a field"
+          <FadeImage
+            src="/images/gallery-field-aerial.avif"
+            alt="Aerial view of a tractor tilling a field with Aggarwal Industries shovels, kicking up dust"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
