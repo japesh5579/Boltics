@@ -1,0 +1,71 @@
+import Image from "next/image";
+import { Flame, Gauge, CircleDot, ShieldCheck, Wrench, Factory } from "lucide-react";
+import Reveal from "./Reveal";
+
+const FEATURES = [
+  { icon: Flame, title: "Heat Treated (Special)", subtitle: "Longer working life" },
+  { icon: Gauge, title: "Longer Edge Length", subtitle: "Less load on tractor, saves fuel" },
+  { icon: CircleDot, title: "Deep Countered Holes", subtitle: "Bolt fits properly, no play" },
+  { icon: ShieldCheck, title: "Rust-Resistant Polish", subtitle: "Protects against corrosion" },
+  { icon: Wrench, title: "Tempered Shovel Bolts", subtitle: "Resists breaking under load" },
+  { icon: Factory, title: "Own Rolling & Forging Unit", subtitle: "Consistent quality, on time" },
+];
+
+export default function PerformanceSection() {
+  return (
+    <section id="about" className="relative overflow-hidden bg-ink py-20 lg:py-28">
+      <div className="mx-auto grid max-w-[1440px] gap-14 px-5 lg:grid-cols-2 lg:gap-10 lg:px-10">
+        <Reveal>
+          <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.3em] text-orange">
+            About Aggarwal Industries
+          </p>
+          <h2 className="font-display text-3xl font-semibold uppercase leading-tight text-white sm:text-4xl lg:text-[42px]">
+            Low Cost of Cultivation, Per Acre
+          </h2>
+          <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-white/65">
+            Founded in 1988 by Mr. Dharamvir Goyal, Aggarwal Industries has been supplying
+            heat-treated cultivator shovels, seed drill shovels and shovel bolts to farmers and
+            dealers across Punjab. We run our own Rolling, Forging and Tempering unit, so quality
+            and delivery timelines stay in our control from raw steel to finished shovel.
+          </p>
+
+          <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3">
+            {FEATURES.map(({ icon: Icon, title, subtitle }, i) => (
+              <Reveal key={title} delay={i * 80} className="flex flex-col gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-md border border-orange/40 text-orange">
+                  <Icon size={20} />
+                </span>
+                <div>
+                  <p className="font-display text-[13px] font-semibold uppercase leading-tight text-white">
+                    {title}
+                  </p>
+                  <p className="mt-1 text-xs text-white/50">{subtitle}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={150} className="relative flex flex-col overflow-hidden rounded-lg bg-ink-soft/60">
+          <div className="relative aspect-[4/5] w-full">
+            <Image
+              src="/images/products/cultivator-shovel.png"
+              alt="Aggarwal Industries cultivator shovel with deep countered holes"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="border-t border-white/10 p-6">
+            <p className="font-display text-sm font-semibold uppercase tracking-wide text-white">
+              Cultivator Shovel
+            </p>
+            <p className="mt-1 text-xs text-white/50">
+              15&Prime;&ndash;17&Prime; sizes, 7&ndash;14mm thickness, chamfered range also available
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
