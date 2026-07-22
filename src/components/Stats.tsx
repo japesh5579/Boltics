@@ -100,7 +100,7 @@ export default function Stats() {
     <section className="border-y border-white/5 bg-ink-soft py-14">
       <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-10 px-5 lg:grid-cols-4 lg:px-10">
         <YearsStat />
-        <StaticStat icon={Factory} value="In-House" label="Rolling, Forging & Tempering" />
+        <StaticStat icon={Factory} value="In-House" label="Rolling, Forging & Heat Treatment" />
         <AcresStat />
         <StaticStat icon={MapPin} value="Amloh" label="Manufactured in Punjab, India" />
       </div>

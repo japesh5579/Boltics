@@ -7,7 +7,7 @@ export default function Hero() {
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src="/videos/hero-tractor.mp4"
-        poster="/images/hero-poster.jpeg"
+        poster="/images/hero-poster-2.jpeg"
         autoPlay
         muted
         loop
@@ -25,14 +25,13 @@ export default function Hero() {
         <Reveal delay={150}>
           <h1 className="font-display text-[42px] font-semibold uppercase leading-[1.05] tracking-tight text-white sm:text-[58px] lg:text-[76px]">
             Cultivator Shovels <br />
-            Built to <span className="text-orange">Outlast</span> <br />
-            the Season.
+            Built to <span className="text-orange">Out-perform</span>
           </h1>
         </Reveal>
         <Reveal delay={300}>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-white/80">
-            Heat-treated, deep-countered cultivator shovels, seed drill shovels and shovel bolts,
-            rolled, forged and tempered in our own Amloh unit.
+            Heat-treated, deep-countered cultivator shovels and seed drill shovels, that lasts
+            long.
           </p>
         </Reveal>
 

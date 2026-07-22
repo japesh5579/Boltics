@@ -22,7 +22,7 @@ const STEPS = [
   },
   {
     n: "04",
-    title: "Tempering",
+    title: "Heat Treatment",
     desc: "Heat treated for a longer working life",
     image: "/images/process/tempering.jpeg",
   },
@@ -46,7 +46,7 @@ export default function ManufacturingProcess() {
       <div className="mx-auto max-w-[1440px] px-5 text-center lg:px-10">
         <Reveal>
           <p className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.3em] text-orange-dark">
-            Rolling &middot; Forging &middot; Tempering
+            Rolling &middot; Forging &middot; Heat Treatment
           </p>
           <h2 className="font-display text-3xl font-semibold uppercase leading-tight text-ink sm:text-4xl lg:text-[42px]">
             How We Manufacture

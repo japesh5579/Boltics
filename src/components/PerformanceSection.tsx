@@ -7,7 +7,7 @@ const FEATURES = [
   { icon: Gauge, title: "Longer Edge Length", subtitle: "Less load on tractor, saves fuel" },
   { icon: CircleDot, title: "Deep Countered Holes", subtitle: "Bolt fits properly, no play" },
   { icon: ShieldCheck, title: "Rust-Resistant Polish", subtitle: "Protects against corrosion" },
-  { icon: Wrench, title: "Tempered Shovel Bolts", subtitle: "Resists breaking under load" },
+  { icon: Wrench, title: "Heat Treated Shovel Bolts", subtitle: "Resists breaking under load" },
   { icon: Factory, title: "Own Rolling & Forging Unit", subtitle: "Consistent quality, on time" },
 ];
 
@@ -25,7 +25,7 @@ export default function PerformanceSection() {
           <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-white/65">
             Founded in 1988 by Mr. Dharamvir Goyal, Aggarwal Industries has been supplying
             heat-treated cultivator shovels, seed drill shovels and shovel bolts to farmers and
-            dealers across Punjab. We run our own Rolling, Forging and Tempering unit, so quality
+            dealers across Punjab. We run our own Rolling, Forging and Heat Treatment unit, so quality
             and delivery timelines stay in our control from raw steel to finished shovel.
           </p>
 
@@ -58,10 +58,10 @@ export default function PerformanceSection() {
           </div>
           <div className="border-t border-white/10 p-6">
             <p className="font-display text-sm font-semibold uppercase tracking-wide text-white">
-              Built for Punjab&rsquo;s Fields
+              We Serve PAN India
             </p>
             <p className="mt-1 text-xs text-white/50">
-              Trusted by farmers and dealers across Punjab since 1988
+              Trusted by farmers and dealers across India since 1988
             </p>
           </div>
         </Reveal>
