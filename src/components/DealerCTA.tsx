@@ -24,7 +24,7 @@ export default function DealerCTA() {
             </p>
           </div>
           <a
-            href="#contact"
+            href="/dealership-application"
             className="inline-flex shrink-0 items-center gap-2 rounded-sm bg-orange px-7 py-4 font-display text-sm font-semibold uppercase tracking-wider text-white transition-transform hover:-translate-y-0.5 hover:bg-white hover:text-ink"
           >
             Apply Now <ArrowRight size={16} />

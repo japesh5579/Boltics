@@ -5,13 +5,13 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Products", href: "#products" },
-  { label: "Manufacturing", href: "#manufacturing" },
-  { label: "Dealership", href: "#dealership" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About Us", href: "/#about" },
+  { label: "Products", href: "/#products" },
+  { label: "Manufacturing", href: "/#manufacturing" },
+  { label: "Dealership", href: "/#dealership" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Contact Us", href: "/dealership-application" },
 ];
 
 export default function Header() {
@@ -33,7 +33,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 lg:px-10">
-        <a href="#home" className="flex items-center gap-3">
+        <a href="/#home" className="flex items-center gap-3">
           <Image src="/images/logo.png" alt="Aggarwal Industries" width={44} height={25} className="h-9 w-auto shrink-0" priority />
           <div className="font-display leading-[0.85] uppercase">
             <div className="text-lg font-semibold tracking-wide text-orange">Aggarwal</div>
@@ -59,12 +59,14 @@ export default function Header() {
           ))}
         </nav>
 
-        <a
-          href="#contact"
-          className="hidden items-center gap-2 rounded-sm bg-orange px-6 py-3 font-display text-[13px] font-semibold uppercase tracking-wider text-white transition-colors hover:bg-orange-dark xl:inline-flex"
-        >
-          Get a Quote
-        </a>
+        <div className="hidden items-center gap-3 xl:flex">
+          <a
+            href="/#quote"
+            className="inline-flex items-center gap-2 rounded-sm bg-orange px-6 py-3 font-display text-[13px] font-semibold uppercase tracking-wider text-white transition-colors hover:bg-orange-dark"
+          >
+            Get a Quote
+          </a>
+        </div>
 
         <button
           className="text-white xl:hidden"
@@ -92,7 +94,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#quote"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-sm bg-orange px-6 py-3 font-display text-[13px] font-semibold uppercase tracking-wider text-white"
             >
