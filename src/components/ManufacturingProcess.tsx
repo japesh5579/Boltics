@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Reveal from "./Reveal";
 
 const STEPS = [
@@ -6,37 +5,43 @@ const STEPS = [
     n: "01",
     title: "Raw Material",
     desc: "High grade steel selected for the batch",
-    image: "/images/process/raw-material.jpeg",
+    video: "/videos/process/raw-material.mp4",
+    poster: "/images/process/raw-material-poster.jpeg",
   },
   {
     n: "02",
     title: "Rolling",
     desc: "Steel rolled to shovel thickness in-house",
-    image: "/images/process/rolling.jpeg",
+    video: "/videos/process/rolling.mp4",
+    poster: "/images/process/rolling-poster.jpeg",
   },
   {
     n: "03",
     title: "Forging",
     desc: "Hot forged to shape in our own unit",
-    image: "/images/process/forging.jpeg",
+    video: "/videos/process/forging.mp4",
+    poster: "/images/process/forging-poster.jpeg",
   },
   {
     n: "04",
     title: "Heat Treatment",
     desc: "Heat treated for a longer working life",
-    image: "/images/process/tempering.jpeg",
+    video: "/videos/process/tempering.mp4",
+    poster: "/images/process/tempering-poster.jpeg",
   },
   {
     n: "05",
     title: "Polishing",
     desc: "Polished to resist corrosion and rust",
-    image: "/images/process/polishing.jpeg",
+    video: "/videos/process/polishing.mp4",
+    poster: "/images/process/polishing-poster.jpeg",
   },
   {
     n: "06",
     title: "Quality Check",
     desc: "Every batch checked before dispatch",
-    image: "/images/process/quality-check.jpeg",
+    video: "/videos/process/quality-check.mp4",
+    poster: "/images/process/quality-check-poster.jpeg",
   },
 ];
 
@@ -58,12 +63,14 @@ export default function ManufacturingProcess() {
             <Reveal key={step.n} delay={i * 100}>
               <div className="group relative flex h-full flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-ink/5 transition-shadow duration-300 hover:shadow-lg">
                 <div className="relative h-36 w-full overflow-hidden sm:h-40">
-                  <Image
-                    src={step.image}
-                    alt={`${step.title} — ${step.desc}`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  <video
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    src={step.video}
+                    poster={step.poster}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
                   <span className="absolute left-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-orange font-display text-xs font-bold text-white shadow-md">
