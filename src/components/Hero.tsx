@@ -1,5 +1,13 @@
-import { ChevronDown, Download, ArrowRight } from "lucide-react";
+import { ChevronDown, Download, ArrowRight, Award, Factory, MapPinned } from "lucide-react";
 import Reveal from "./Reveal";
+
+const YEARS = new Date().getFullYear() - 1988;
+
+const BADGES = [
+  { icon: Award, label: `${YEARS}+ Years Trusted` },
+  { icon: Factory, label: "Own Manufacturing Unit" },
+  { icon: MapPinned, label: "PAN India Reach" },
+];
 
 export default function Hero() {
   return (
@@ -50,6 +58,19 @@ export default function Hero() {
             >
               Download Catalogue <Download size={16} />
             </a>
+          </div>
+        </Reveal>
+
+        <Reveal delay={550}>
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+            {BADGES.map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-2.5 text-white/85">
+                <Icon size={18} className="text-orange" />
+                <span className="font-display text-xs font-semibold uppercase tracking-wider">
+                  {label}
+                </span>
+              </div>
+            ))}
           </div>
         </Reveal>
       </div>
