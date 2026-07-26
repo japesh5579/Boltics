@@ -7,10 +7,10 @@ import { Menu, X } from "lucide-react";
 const NAV_LINKS = [
   { label: "Home", href: "/#home" },
   { label: "About Us", href: "/#about" },
-  { label: "Products", href: "/#products" },
   { label: "Manufacturing", href: "/#manufacturing" },
-  { label: "Dealership", href: "/#dealership" },
   { label: "Gallery", href: "/#gallery" },
+  { label: "Products", href: "/#products" },
+  { label: "Dealership", href: "/#dealership" },
   { label: "Contact Us", href: "/dealership-application" },
 ];
 
