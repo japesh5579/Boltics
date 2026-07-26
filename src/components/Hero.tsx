@@ -3,9 +3,9 @@ import Reveal from "./Reveal";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative flex h-[85svh] min-h-[560px] w-full items-center overflow-hidden bg-ink sm:h-[100svh] sm:min-h-[640px]">
+    <section id="home" className="relative flex h-[100svh] min-h-[640px] w-full items-center overflow-hidden bg-ink">
       <video
-        className="absolute inset-0 h-full w-full object-cover object-[62%_center] sm:object-center"
+        className="absolute inset-0 h-full w-full object-contain sm:object-cover"
         src="/videos/hero-tractor.mp4"
         poster="/images/hero-poster-2.jpeg"
         autoPlay
