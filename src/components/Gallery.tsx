@@ -21,12 +21,14 @@ export default function Gallery() {
         </div>
 
         <div className="relative h-[340px] md:h-[520px]">
-          <FadeImage
-            src="/images/gallery-field-aerial.avif"
-            alt="Aerial view of a tractor tilling a field with Aggarwal Industries shovels, kicking up dust"
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            src="/videos/gallery-field.mp4"
+            poster="/images/gallery-field-poster.jpeg"
+            autoPlay
+            muted
+            loop
+            playsInline
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           <span className="absolute bottom-6 right-6 rounded-sm bg-black/60 px-4 py-2 font-display text-xs font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur-sm">
