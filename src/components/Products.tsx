@@ -187,7 +187,7 @@ export default function Products() {
                       <p className="font-display text-sm font-semibold uppercase leading-tight text-ink">
                         {p.name}
                       </p>
-                      <p className="mt-1 text-xs leading-snug text-ink/55">{p.desc}</p>
+                      <p className="mt-1 line-clamp-2 text-xs leading-snug text-ink/55">{p.desc}</p>
                     </div>
                   </a>
 
