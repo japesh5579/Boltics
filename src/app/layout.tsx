@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Oswald, Inter } from "next/font/google";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -32,10 +31,7 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${oswald.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-ink">
-        {children}
-        <WhatsAppButton />
-      </body>
+      <body className="min-h-full flex flex-col bg-ink">{children}</body>
     </html>
   );
 }
