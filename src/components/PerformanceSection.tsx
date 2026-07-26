@@ -1,6 +1,5 @@
 import { Flame, Gauge, CircleDot, ShieldCheck, Wrench, Factory } from "lucide-react";
 import Reveal from "./Reveal";
-import FadeImage from "./FadeImage";
 
 const FEATURES = [
   { icon: Flame, title: "Heat Treated (Special)", subtitle: "Longer working life" },
@@ -48,12 +47,14 @@ export default function PerformanceSection() {
 
         <Reveal delay={150} className="relative flex flex-col overflow-hidden rounded-lg bg-ink-soft/60">
           <div className="relative aspect-[16/9] w-full">
-            <FadeImage
-              src="/images/about-rice-field.jpg"
-              alt="Healthy crop field grown with Aggarwal Industries implements"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+            <video
+              className="absolute inset-0 h-full w-full object-cover"
+              src="/videos/rice-field.mp4"
+              poster="/images/rice-field-poster.jpeg"
+              autoPlay
+              muted
+              loop
+              playsInline
             />
           </div>
           <div className="border-t border-white/10 p-6">
