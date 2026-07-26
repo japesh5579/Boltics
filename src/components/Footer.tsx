@@ -21,11 +21,18 @@ export default function Footer() {
             drill shovels and shovel bolts from our own Rolling, Forging and Heat Treatment unit.
           </p>
           <div className="mt-7 flex items-center gap-3">
-            {[FacebookIcon, InstagramIcon, YoutubeIcon, LinkedinIcon].map((Icon, i) => (
+            {[
+              { Icon: FacebookIcon, href: "#", label: "Facebook" },
+              { Icon: InstagramIcon, href: "https://www.instagram.com/ai.aggarwalindustries/", label: "Instagram" },
+              { Icon: YoutubeIcon, href: "#", label: "YouTube" },
+              { Icon: LinkedinIcon, href: "#", label: "LinkedIn" },
+            ].map(({ Icon, href, label }) => (
               <a
-                key={i}
-                href="#"
-                aria-label="Social link"
+                key={label}
+                href={href}
+                target={href !== "#" ? "_blank" : undefined}
+                rel={href !== "#" ? "noopener noreferrer" : undefined}
+                aria-label={label}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-orange hover:bg-orange hover:text-white"
               >
                 <Icon size={16} />
